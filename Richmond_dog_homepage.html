@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Dog Site
+    </title>
+
+
+    <style>
+
+        body {
+            background-color: coral;
+            margin-left: auto;
+            margin-right: auto;
+            width:1200px;
+        }
+        /*add a black background*/
+        .topnav {
+            overflow: auto;
+            width: 100%;
+            background-color: #333;
+        }
+        /*style the links*/
+            .topnav a {
+
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+
+            }
+            /*style the links on hover*/
+                .topnav a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+                .topnav a.active {
+                    background-color: #4CAF50;
+                    color: white;
+                }
+                /*style for h1 headings*/
+        h1 {
+
+            text-align: center;
+            background-color: black;
+            color: white;
+            margin: 20px 0px 100px 10px;
+
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .column {
+            flex: 33.33%;
+            padding: 5px;
+        }
+        /*style for img*/
+
+        img {
+            height: 200px;
+            padding: 0px 5px 0px 5px;
+            overflow: hidden;
+            display: inline;
+            position: absolute;
+            cursor:pointer;
+        }
+
+        .hover-zoom {
+            -moz-transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s
+        }
+            .hover-zoom:hover {
+                -moz-transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+                transform: scale(1.5)
+            }
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="https://www.petfinder.com/dog-breeds/" target="_blank">Adopt</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+
+    <h1>Welcome to the Dog Site<p>Click on a dog to learn more about it</p></h1>
+    
+    <div class="row">
+        <div class="column">
+           <a href="https://www.petfinder.com/dog-breeds/german-shepherd/" target="_blank" >
+            <img class="hover-zoom" src="https://www.petsworld.in/blog/wp-content/uploads/2014/06/German-shepherd-dog-hd-wallpapers-beautiful-desktop-images-widescreen.jpg" alt="German">
+           </a>
+              
+        </div>
+        <div class="column">
+            <a href="https://www.petfinder.com/dog-breeds/labrador-retriever/" target="_blank">
+
+                <img class="hover-zoom" src="http://best-funnycatsanddogs.com/uploads/posts/2015-12/32_labrador_retriever.jpg" alt="Labra">
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://www.petfinder.com/dog-breeds/alaskan-malamute/" target="_blank">
+                <img class="hover-zoom" src="https://pixfeeds.com/images/dogs/sled-dogs/1280-472178695-alaskan-malamute.jpg" alt="Alaskan Malamute">
+                </a>
+        </div>
+        <div class="column">
+            <a href="https://www.petfinder.com/dog-breeds/chihuahua/" target="_blank">
+                <img class="hover-zoom" src="https://www.pixelstalk.net/wp-content/uploads/2016/12/Chihuahua-Background-Widescreen.jpg" alt="Chihuahua">
+            </a>
+        </div>
+    </div>
+
+    <h2 style="margin-top:20%">Videos</h2>
+   <p> <a  href="https://www.youtube.com/results?search_query=dog+videos" target="_blank"> Click Here for more Videos </a><br></p>
+
+    <div style="position: fixed; z-index: -99; width: 100%; height: 100%">
+        <iframe frameborder="0" height:100% width:100% 
+                src="https://youtube.com/embed/BUNC_sKn9dM?autoplay=1&controls=0&showinfo=0&autohide=1&mute=1"></iframe>
+    </div>
+
+
+</body>
+</html>
+
