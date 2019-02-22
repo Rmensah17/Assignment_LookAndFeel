@@ -1,7 +1,84 @@
 <html>
 <head>
-    Test
-</head>
-<p1> this is a test page</p1>
+    <title>
+        Dog Site
+    </title>
 
+
+    <style>
+
+        body {
+            background-color:coral; 
+            margin:5%;
+        }
+        h1 {
+            text-align: center;
+            background-color: black;
+            color: white;
+            margin: 20px 0px 100px 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .column {
+            flex: 33.33%;
+            padding: 5px;
+        }
+
+        img {
+            height: 200px;
+            padding: 0px 5px 0px 5px;
+            overflow: hidden;
+            display: inline;
+            position: absolute;
+        }
+
+        animate {
+            position: relative;
+            border;
+            1px solid green;
+            background: yellow;
+            width: 100px;
+            height: 100px;
+        }
+
+        .hover-zoom {
+            -moz-transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s
+        }
+            .hover-zoom:hover {
+                -moz-transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+                transform: scale(1.5)
+            }
+    </style>
+</head>
+<h1 >Welcome to the Dog Site</h1>
+
+<body >
+    <h2 >
+        <div class="row">
+            <div class="column">
+                <img class="hover-zoom" src="https://www.petsworld.in/blog/wp-content/uploads/2014/06/German-shepherd-dog-hd-wallpapers-beautiful-desktop-images-widescreen.jpg" alt="Snow">
+            </div>
+            <div class="column">
+                <img class="hover-zoom" src="http://best-funnycatsanddogs.com/uploads/posts/2015-12/32_labrador_retriever.jpg" alt="Forest">
+            </div>
+            <div class="column">
+                <img class="hover-zoom" src="https://pixfeeds.com/images/dogs/sled-dogs/1280-472178695-alaskan-malamute.jpg" alt="Forest">
+            </div>
+        </div>
+
+    </h2>
+
+
+</body>
 </html>
+
