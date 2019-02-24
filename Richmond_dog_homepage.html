@@ -1,54 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+
     <title>
-        Dog Site
+        Animals: Dog
     </title>
 
-
+    <!--######################################################################-->
+    <!--CSS-->
     <style>
-
+        /*css for the body*/
         body {
-            background-color: coral;
+            background-color: white;
             margin-left: auto;
             margin-right: auto;
-            width:1200px;
+            width: 1200px;
         }
         /*add a black background*/
         .topnav {
             overflow: auto;
             width: 100%;
-            background-color: #333;
+            background-color: black;
         }
-        /*style the links*/
+            /*style the links*/
             .topnav a {
-
                 float: left;
                 color: #f2f2f2;
                 text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
                 font-size: 17px;
-
             }
-            /*style the links on hover*/
+                /*style the links on hover*/
                 .topnav a:hover {
                     background-color: #ddd;
                     color: black;
                 }
-
+                /*style the active selected tab*/
                 .topnav a.active {
                     background-color: #4CAF50;
                     color: white;
                 }
-                /*style for h1 headings*/
+        /*style for h1 headings*/
         h1 {
-
             text-align: center;
             background-color: black;
             color: white;
             margin: 20px 0px 100px 10px;
-
         }
 
         * {
@@ -62,16 +66,19 @@
         .column {
             flex: 33.33%;
             padding: 5px;
+            
+
         }
+
         /*style for img*/
 
         img {
             height: 200px;
             padding: 0px 5px 0px 5px;
+            max-width:100%;
             overflow: hidden;
             display: inline;
             position: absolute;
-            cursor:pointer;
         }
 
         .hover-zoom {
@@ -79,45 +86,124 @@
             -webkit-transition: all 0.3s;
             transition: all 0.3s
         }
+
             .hover-zoom:hover {
                 -moz-transform: scale(1.1);
                 -webkit-transform: scale(1.1);
                 transform: scale(1.5)
             }
 
+        /*css for the footer*/
+        footer {
+            background-color: black;
+            color: white;
+            clear: both;
+            text-align: center;
+            padding: 5px;
+
+        }
     </style>
+    <!--######################################################################-->
+    <!-- Script for the SlideShow -->
+    <script type="text/javascript">
+        theimage = new Array();
+
+        //store the images in the array
+        // Format: theimage[...]=[image URL, link URL, name/description]
+        theimage[0] = ["img/img8.jpeg", "", ""];
+        theimage[1] = ["img/img4.jpg", "", ""];
+        theimage[2] = ["img/img1.jpg", "", ""];
+        theimage[3] = ["img/img2.jpg", "", ""];
+        theimage[5] = ["img/img3.jpg", "", ""];
+        theimage[6] = ["img/img6.jpg", "", ""];
+        theimage[7] = ["img/img7.jpg", "", ""];
+        theimage[8] = ["img/img5.jpg", "", ""];
+        theimage[9] = ["img/img9.jpeg", "", ""];
+        theimage[10] = ["img/img10.jpg", "", ""];
+        theimage[11] = ["img/img11.jpg", "", ""];
+
+        playspeed = 3000;// switch image every x ms
+        //key that holds where in the array currently are
+        i = 0;
+
+        //play the slide show when the page loads
+        window.onload = function () {
+            //set the first slide
+            SetSlide(0);
+            //autoplay
+            PlaySlide();
+        }
+
+        //set the slide number
+        function SetSlide(num) {
+            //too big
+            i = num % theimage.length;
+            //too small
+            if (i < 0) i = theimage.length - 1;
+
+            //switch the image
+            document.images.imgslide.src = theimage[i][0];
+        }
+
+        //playing the slide
+        function PlaySlide() {
+            if (!window.playing) {
+                PlayingSlide(i + 1);
+                if (document.slideshow.play) {
+                    document.slideshow.play.value = "   Stop   ";
+                }
+            }
+            else {
+                playing = clearTimeout(playing);
+                if (document.slideshow.play) {
+                    document.slideshow.play.value = "   Play   ";
+                }
+            }
+        }
+        //Play the slide number
+        function PlayingSlide(num) {
+            playing = setTimeout('PlayingSlide(i+1);SetSlide(i+1);', playspeed);
+        }
+
+    </script>
+
 </head>
 
-
-<body>
-
+<!--Start of Body-->
+<body style="max-width:100%;">
+    <!--Navigation Bar-->
     <div class="topnav">
         <a class="active" href="#home">Home</a>
-        <a href="#news">News</a>
+        <a href="Moez_Page.html">Breeds</a>
+        <a href="Most_Popular_Gleb.html">Popular Breeds (Country)</a>
         <a href="https://www.petfinder.com/dog-breeds/" target="_blank">Adopt</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+        <a href="Contactus.html">Contact Us</a>
+        <a href="about.html">About</a>
+        <a href="https://github.com/Rmensah17/Assignment_LookAndFeel" target="_blank">GitHub</a>
     </div>
 
-    <h1>Welcome to the Dog Site<p>Click on a dog to learn more about it</p></h1>
-    
+    <!--Page Header-->
+    <h1>Man's Best Friend: Dogs<br><font size="3">Click on an image to learn more about it (opens in an external link)</font></h1>
+
+    <!--Four Images of our favorite dog breeds to learn more at external site-->
+
     <div class="row">
         <div class="column">
-           <a href="https://www.petfinder.com/dog-breeds/german-shepherd/" target="_blank" >
-            <img class="hover-zoom" src="https://www.petsworld.in/blog/wp-content/uploads/2014/06/German-shepherd-dog-hd-wallpapers-beautiful-desktop-images-widescreen.jpg" alt="German">
-           </a>
-              
+            <a href="https://www.petfinder.com/dog-breeds/german-shepherd/" target="_blank">
+                <img class="hover-zoom" src="https://www.petsworld.in/blog/wp-content/uploads/2014/06/German-shepherd-dog-hd-wallpapers-beautiful-desktop-images-widescreen.jpg" alt="German Sherpad">
+            </a>
+
         </div>
         <div class="column">
             <a href="https://www.petfinder.com/dog-breeds/labrador-retriever/" target="_blank">
 
-                <img class="hover-zoom" src="http://best-funnycatsanddogs.com/uploads/posts/2015-12/32_labrador_retriever.jpg" alt="Labra">
+                <img class="hover-zoom" src="http://best-funnycatsanddogs.com/uploads/posts/2015-12/32_labrador_retriever.jpg" alt="Labrador Retriever">
             </a>
         </div>
         <div class="column">
             <a href="https://www.petfinder.com/dog-breeds/alaskan-malamute/" target="_blank">
                 <img class="hover-zoom" src="https://pixfeeds.com/images/dogs/sled-dogs/1280-472178695-alaskan-malamute.jpg" alt="Alaskan Malamute">
-                </a>
+            </a>
         </div>
         <div class="column">
             <a href="https://www.petfinder.com/dog-breeds/chihuahua/" target="_blank">
@@ -126,15 +212,51 @@
         </div>
     </div>
 
-    <h2 style="margin-top:20%">Videos</h2>
-   <p> <a  href="https://www.youtube.com/results?search_query=dog+videos" target="_blank"> Click Here for more Videos </a><br></p>
+    <!--give space-->
+    <br />
+    <h2 style="margin-top:20%">Team Member's Dog Slide Show</h2>
+    <p></p>
 
-    <div style="position: fixed; z-index: -99; width: 100%; height: 100%">
-        <iframe frameborder="0" height:100% width:100% 
-                src="https://youtube.com/embed/BUNC_sKn9dM?autoplay=1&controls=0&showinfo=0&autohide=1&mute=1"></iframe>
+
+    <!-- slide show Block -->
+    <div name="slideshow" ">
+        <script type="text/javascript" >
+            document.write('<img name="imgslide" id="imgslide" src="' + theimage[0][0] + '" border="0">')
+        </script>
     </div>
 
+    <!-- end of slide show  -->
+
+    <!--Funny Videos Block-->
+    <h2 style="margin-top:20%">Cute and Funny Videos</h2>
+    <p> <a href="https://www.youtube.com/results?search_query=dog+videos" target="_blank"> Click Here for more Videos </a><br></p>
+    <div class="row">
+        <div class="column">
+            <iframe frameborder="0" height:100% width:100%
+                    src="https://youtube.com/embed/BUNC_sKn9dM?autoplay=1&controls=0&showinfo=0&autohide=1&mute=1"></iframe>
+        </div>
+
+        <div class="column">
+            <iframe frameborder="0" height:100% width:100%
+                    src="https://youtube.com/embed/BuG6BWLQKuc?autoplay=1&controls=0&showinfo=0&autohide=1&mute=1"></iframe>
+        </div>
+
+        <div class="column">
+            <iframe frameborder="0" height:100% width:100%
+                    src="https://youtube.com/embed/a6KGPBflhiM?autoplay=1&controls=0&showinfo=0&autohide=1&mute=1"></iframe>
+        </div>
+    </div>
 
 </body>
+<!--End of Body-->
 </html>
+<br>
+<!--Footer-->
+<footer>
+    <p align="center">
+        Team Members: Richmond, Gleb, and Moez.<br>Last Updates: February 24, 2019.
+        <br>
+        Original creation date: February 18, 2019.
+    </p>
+</footer>
 
