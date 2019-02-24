@@ -1,8 +1,4 @@
 /**
- * Your JS code here
- */
-
-/**
  * Sample code
  */
 document.addEventListener('DOMContentLoaded', function() {
