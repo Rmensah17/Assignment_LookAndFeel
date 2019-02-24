@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
 
     <title>
         Animals: Dog
@@ -17,7 +17,7 @@
     <style>
         /*css for the body*/
         body {
-            background-color: rgba(106, 23, 23, 0.68);
+            background-color: white;
             margin-left: auto;
             margin-right: auto;
             width: 1200px;
@@ -66,14 +66,16 @@
         .column {
             flex: 33.33%;
             padding: 5px;
-        }
+            
 
+        }
 
         /*style for img*/
 
         img {
             height: 200px;
             padding: 0px 5px 0px 5px;
+            max-width:100%;
             overflow: hidden;
             display: inline;
             position: absolute;
@@ -98,10 +100,10 @@
             clear: both;
             text-align: center;
             padding: 5px;
+
         }
     </style>
     <!--######################################################################-->
-
     <!-- Script for the SlideShow -->
     <script type="text/javascript">
         theimage = new Array();
@@ -168,12 +170,12 @@
 </head>
 
 <!--Start of Body-->
-<body>
+<body style="max-width:100%;">
     <!--Navigation Bar-->
     <div class="topnav">
         <a class="active" href="#home">Home</a>
-        <a href="#Breeds">Breeds</a>
-        <a href="#PopularBreedsByCountry">Popular Breeds (Country)</a>
+        <a href="Moez_Page.html">Breeds</a>
+        <a href="Most_Popular_Gleb.html">Popular Breeds (Country)</a>
         <a href="https://www.petfinder.com/dog-breeds/" target="_blank">Adopt</a>
         <a href="Contactus.html">Contact Us</a>
         <a href="about.html">About</a>
@@ -184,6 +186,7 @@
     <h1>Man's Best Friend: Dogs<br><font size="3">Click on an image to learn more about it (opens in an external link)</font></h1>
 
     <!--Four Images of our favorite dog breeds to learn more at external site-->
+
     <div class="row">
         <div class="column">
             <a href="https://www.petfinder.com/dog-breeds/german-shepherd/" target="_blank">
@@ -216,7 +219,7 @@
 
 
     <!-- slide show Block -->
-    <div name="slideshow">
+    <div name="slideshow" ">
         <script type="text/javascript" >
             document.write('<img name="imgslide" id="imgslide" src="' + theimage[0][0] + '" border="0">')
         </script>
