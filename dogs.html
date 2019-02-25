@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Animals: Dog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+   
+    <!--CSS-->
+    <style>
+
+        /*Hover on Image Zoom*/
+        .hover-zoom {
+            -moz-transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s
+        }
+
+            .hover-zoom:hover {
+                -moz-transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+                transform: scale(1.5)
+            }
+
+
+        /*set the display property for the images on the slide show*/
+        .DogSlides {
+            display: none;
+        }
+
+       /*Styling to set images side by side*/
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 25%;
+            padding: 5px;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Responsive layout Smaller screen for the first clickable images */
+        @media screen and (max-width: 500px) {
+            .column {
+                width: 100%;
+            }
+        }
+
+        /*CSS for the Div on the slide show--centers div on page*/
+        #center {
+            
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /*css for the body*/
+        body {
+            background-color: white;
+        }
+        /*Navigation Bar CSS*/
+        .topnav {
+            overflow: auto;
+            width: 100%;
+            background-color: lightskyblue;
+        }
+            /*style the links*/
+            .topnav a {
+                float: left;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+                /*style the links on hover*/
+                .topnav a:hover {
+                    color: black;
+                }
+                /*style the active selected tab*/
+                .topnav a.active {
+                    background-color: darkslategrey;
+                    color: white;
+                }
+    </style>
+</head>
+
+<body style="max-width:100%;">
+    <!--Navigation Bar-->
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="dogbreeds.html">Breeds</a>
+        <a href="popularbreeds.html">Popular Breeds (Country)</a>
+        <a href="https://www.petfinder.com/dog-breeds/" target="_blank">Adopt</a>
+        <a href="Contactus.html">Contact Us</a>
+        <a href="about.html">About</a>
+        <a href="https://github.com/Rmensah17/Assignment_LookAndFeel" target="_blank">GitHub</a>
+    </div>
+
+    <p><br /></p> <!--Add a space-->
+    <!--Site Title div-->
+    <div style="padding:5px;background-color:lightskyblue;text-align:center;color: black;">
+        <h1>Man's Best Friend: Dogs</h1>
+    </div>
+    <!--Team Member Dogs-->
+    <div id="center" style="max-width:500px">
+        <h2 style="text-align:center">Team Member's Dog Slide Shows</h2>
+        <img class="DogSlides" src="img/img1.jpg" style="width:100%">
+        <img class="DogSlides" src="img/img2.jpg" style="width:100%">
+        <img class="DogSlides" src="img/img3.jpg" style="width:100%">
+        <img class="DogSlides" src="img/img4.jpg" style="width:100%">
+        <img class="DogSlides" src="img/img5.jpg" style="width:100%">
+        <img class="DogSlides" src="img/img6.jpg" style="width:100%">
+        <img class="DogSlides" src="img/img7.jpg" style="width:100%">
+        <img class="DogSlides" src="img/img8.jpeg" style="width:100%">
+        <img class="DogSlides" src="img/img9.jpeg" style="width:100%">
+        <img class="DogSlides" src="img/img10.jpg" style="width:100%">
+        <img class="DogSlides" src="img/img11.jpg" style="width:100%">
+    </div>
+
+    <!--JavaScript for the Slide show of the Team Member dogs-->
+    <script>
+        var imageIndex = 0;
+        PlaySlides();
+
+        function PlaySlides() {
+            var i;
+            var x = document.getElementsByClassName("DogSlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            imageIndex++;
+            if (imageIndex > x.length) { imageIndex = 1 }
+            x[imageIndex - 1].style.display = "block";
+            setTimeout(PlaySlides, 3000); // Change image every 2 seconds
+        }
+    </script>
+
+
+    <!--Click Image to learn more div-->
+    <div class="row">
+        <h2 style="text-align:center">Click to learn more</h2>
+        <p><br /></p> <!--Add a space-->
+        <div class="column">
+            <a href="https://www.petfinder.com/dog-breeds/german-shepherd/" target="_blank">
+                <img class="hover-zoom" src="img/img01.jpg" alt="German Sherpad" style="width:100%">
+            </a>
+
+        </div>
+        <div class="column">
+            <a href="https://www.petfinder.com/dog-breeds/labrador-retriever/" target="_blank">
+
+                <img class="hover-zoom" src="img/img02.jpg" alt="Labrador Retriever" style="width:100%">
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://www.petfinder.com/dog-breeds/alaskan-malamute/" target="_blank">
+                <img class="hover-zoom" src="img/img03.jpg" alt="Alaskan Malamute" style="width:100%">
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://www.petfinder.com/dog-breeds/chihuahua/" target="_blank">
+                <img class="hover-zoom" src="img/img04.png" alt="Chihuahua" style="width:100%">
+            </a>
+        </div>
+    </div>
+
+    <p><br /></p> <!--Add a space-->
+    <!--Funny Videos Div-->
+    <div style="background-color:whitesmoke">
+        <h2>Cute and Funny Videos</h2>
+        <!--Display button to go to Youtube for more videos-->
+        <p>Click the icon to go to youtube</p>
+        <button style="background-image:url(img/img12.png); background-size:cover;cursor:pointer; padding: 15px 32px;margin: 4px 2px;display: inline-block;border: none;" type="button">
+            <a href="https://www.youtube.com/results?search_query=dog+videos" target="_blank"></a>
+
+        </button>
+
+        <div class="row">
+            <div class="column">
+                <iframe frameborder="0" height:100% width:100%
+                        src="https://youtube.com/embed/BUNC_sKn9dM?autoplay=1&controls=0&showinfo=0&autohide=1&mute=1"></iframe>
+            </div>
+
+            <div class="column">
+                <iframe frameborder="0" height:100% width:100%
+                        src="https://youtube.com/embed/BuG6BWLQKuc?autoplay=1&controls=0&showinfo=0&autohide=1&mute=1"></iframe>
+            </div>
+
+            <div class="column">
+                <iframe frameborder="0" height:100% width:100%
+                        src="https://youtube.com/embed/a6KGPBflhiM?autoplay=1&controls=0&showinfo=0&autohide=1&mute=1"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer div-->
+    <div style="background-color:lightskyblue;color:black;clear:both;text-align:center">
+        <footer>
+            <p align="center">
+                Team Members: Richmond, Gleb, and Moez.<br>Last Updates: February 24, 2019.
+                <br>
+                Original creation date: February 18, 2019.
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
