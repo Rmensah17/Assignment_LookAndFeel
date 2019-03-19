@@ -2,6 +2,38 @@
 <html lang="en">
 
 <head>
+    <style>
+        /*css for the body*/
+        body {
+            background-color: white;
+        }
+        /*Navigation Bar CSS*/
+        .topnav {
+            position: fixed;
+            top: 0;
+            overflow: auto;
+            width: 80%;
+            background-color: lightskyblue;
+        }
+            /*style the links*/
+            .topnav a {
+                float: left;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+                /*style the links on hover*/
+                .topnav a:hover {
+                    color: black;
+                }
+                /*style the active selected tab*/
+                .topnav a.active {
+                    background-color: darkslategrey;
+                    color: white;
+                }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,9 +41,23 @@
     <title>The most popular breeds by country</title>
 </head>
 
-<body style="margin:0 20%;">
+<body style="margin:0 10%;">
+    <!--Navigation Bar-->
+    <div class="topnav">
+        <a href="dog_homepage.html">Home</a>
+        <a href="dogbreeds.html">Breeds</a>
+        <a class="active" href="popularbreeds.html">Popular Breeds (Country)</a>
+        <a href="https://www.petfinder.com/dog-breeds/" target="_blank">Adopt</a>
+        <a href="Contactus.html" onclick="window.open('Contactus.html',
+                         'newwindow',
+                         'width=500,height=600');
+              return false;">Contact Us</a>
+        <a href="about.html">About</a>
+        <a href="https://github.com/Rmensah17/Assignment_LookAndFeel" target="_blank">GitHub</a>
+    </div>
+    <p><br /></p> <!--Add a space-->
+    <p><br /></p> <!--Add a space-->
     <div class="container">
-        <button style="background-color:greenyellow; cursor:pointer" type="button"><a href="dog_homepage.html"> Return to Homepage</a></button>
         <div style="text-align:center;padding:20px;">
             <h1 style="font-family:Verdana;font-size:36px;">
                 The most popular breeds

@@ -67,8 +67,10 @@
         }
         /*Navigation Bar CSS*/
         .topnav {
+            position: fixed;
+            top: 0;
             overflow: auto;
-            width: 100%;
+            width: 80%;
             background-color: lightskyblue;
         }
             /*style the links*/
@@ -92,17 +94,25 @@
     </style>
 </head>
 
-<body style="max-width:100%;">
+<body style="max-width:100%;margin:0 10%;margin-bottom:10%">
     <!--Navigation Bar-->
     <div class="topnav">
         <a class="active" href="#home">Home</a>
         <a href="dogbreeds.html">Breeds</a>
         <a href="popularbreeds.html">Popular Breeds (Country)</a>
-        <a href="https://www.petfinder.com/dog-breeds/" target="_blank">Adopt</a>
-        <a href="Contactus.html">Contact Us</a>
+        <a href="https://www.petfinder.com/dog-breeds/" onclick="window.open('https://www.petfinder.com/dog-breeds/', 
+                         'newwindow'); 
+              return false;">Adopt</a>
+
+        <a href="Contactus.html"     onclick="window.open('Contactus.html', 
+                         'newwindow', 
+                         'width=500,height=600'); 
+              return false;">Contact Us</a>
+
         <a href="about.html">About</a>
         <a href="https://github.com/Rmensah17/Assignment_LookAndFeel" target="_blank">GitHub</a>
     </div>
+    <p><br /></p> <!--Add a space-->
 
     <p><br /></p> <!--Add a space-->
     <!--Site Title div-->

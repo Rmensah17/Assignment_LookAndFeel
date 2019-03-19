@@ -1,10 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+        /*css for the body*/
+        body {
+            background-color: white;
+        }
+        /*Navigation Bar CSS*/
+        .topnav {
+            position: fixed;
+            top: 0;
+            overflow: auto;
+            width: 80%;
+            background-color: lightskyblue;
+        }
+            /*style the links*/
+            .topnav a {
+                float: left;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+                /*style the links on hover*/
+                .topnav a:hover {
+                    color: black;
+                }
+                /*style the active selected tab*/
+                .topnav a.active {
+                    background-color: darkslategrey;
+                    color: white;
+                }
+    </style>
     <title>About our Site</title>
 </head>
 <body style="margin:0 10%; background-color: white">
-    <button  style="background-color:greenyellow; cursor:pointer"  type="button"><a href="dog_homepage.html"> Return to Homepage</a></button>
+    <!--Navigation Bar-->
+    <div class="topnav" >
+        <a  href="dog_homepage.html">Home</a>
+        <a href="dogbreeds.html">Breeds</a>
+        <a href="popularbreeds.html">Popular Breeds (Country)</a>
+        <a href="https://www.petfinder.com/dog-breeds/" target="_blank">Adopt</a>
+        <a href="Contactus.html"     onclick="window.open('Contactus.html', 
+                         'newwindow', 
+                         'width=500,height=600'); 
+              return false;">Contact Us</a>
+        <a class="active" href="about.html">About</a>
+        <a href="https://github.com/Rmensah17/Assignment_LookAndFeel" target="_blank">GitHub</a>
+    </div>
+    <p><br /></p> <!--Add a space-->
+    <p><br /></p> <!--Add a space-->
     <h1>Brief Summary of the Elements on our site</h1>
 
     <h2>Responsiveness</h2>
@@ -60,7 +106,7 @@
             </li>
 
             <li>
-                <u> Consistency:</u> We ensured consistency on our site by maintaining the same background color and back color for the "Return to Homepage" button. This makes it easier for the user to return to the main page with ease. 
+                <u> Consistency:</u> We ensured consistency on our site by maintaining the same background color and back color for the "Return to Homepage" button. This makes it easier for the user to return to the main page with ease.
 
             </li>
 
